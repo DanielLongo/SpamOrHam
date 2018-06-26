@@ -17,6 +17,9 @@ def read_messages(filepath):
 	labels = data["labels"]	
 	# assert(len(labels) == len(counts))
 	# print("Number of examples", len(labels))
+	print("params", count_vectorizer.get_params())
+	print("type", type(count_vectorizer))
+	print("shape", np.shape(counts))
 	return labels, counts, count_vectorizer
 
 # labels, counts = read_messages("./spam.csv")
