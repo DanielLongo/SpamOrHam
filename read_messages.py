@@ -16,12 +16,13 @@ def porter_stemmer(text, ps):
 				continue
 			word = word[0] #remvoes extra punctuation
 			word = ps.stem(word)
-			print(word)
 			final += [word]
+
 		except Exception as e:
 			print("ERROROROR", e)
 			print(word)
 			raise Exception("LOOOK")
+	assert(len(np.shape(text)) == 1), "text ERROROROR"
 	return final
 
 
